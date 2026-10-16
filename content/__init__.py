@@ -1,0 +1,1 @@
+"""Content package — editable site data lives here."""

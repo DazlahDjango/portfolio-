@@ -1,0 +1,24 @@
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <span class="brand-mark">D</span>
+            <div>
+                <p class="footer-name">{{ profile.name }}</p>
+                <p class="footer-tagline">{{ profile.title }}</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="mailto:{{ profile.email }}">Email</a>
+            {% if profile.github %}<a href="{{ profile.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+            {% if profile.linkedin %}<a href="{{ profile.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{%
+            endif %}
+            {% if profile.twitter %}<a href="{{ profile.twitter }}" target="_blank" rel="noopener">Twitter</a>{% endif
+            %}
+        </div>
+
+        <p class="footer-copy">
+            &copy; {{ current_year }} {{ profile.name }}. All rights reserved.
+        </p>
+    </div>
+</footer>

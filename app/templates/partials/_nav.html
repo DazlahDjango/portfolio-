@@ -1,0 +1,26 @@
+<nav class="nav" id="mainNav">
+    <div class="nav-container">
+        <a href="{{ url_for('main.home') }}" class="nav-brand">
+            <span class="brand-mark">D</span>
+            <span class="brand-name">{{ profile.name }}</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="{{ url_for('main.home') }}" class="{{ 'active' if request.endpoint == 'main.home' }}">Home</a>
+            </li>
+            <li><a href="{{ url_for('main.about') }}"
+                    class="{{ 'active' if request.endpoint == 'main.about' }}">About</a></li>
+            <li><a href="{{ url_for('main.skills') }}"
+                    class="{{ 'active' if request.endpoint == 'main.skills' }}">Skills</a></li>
+            <li><a href="{{ url_for('main.services') }}"
+                    class="{{ 'active' if request.endpoint == 'main.services' }}">Services</a></li>
+            <li><a href="{{ url_for('main.projects') }}"
+                    class="{{ 'active' if request.endpoint == 'main.projects' }}">Projects</a></li>
+            <li><a href="{{ url_for('main.contact') }}" class="nav-cta">Hire Me</a></li>
+        </ul>
+    </div>
+</nav>

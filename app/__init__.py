@@ -34,4 +34,15 @@ def create_app(config_name='default'):
     from app.routes import main
     app.register_blueprint(main)
 
+        # --- Context processor: variables available in every template ---
+    @app.context_processor
+    def inject_globals():
+        from datetime import datetime
+        from content.profile import PROFILE
+
+        return {
+            'profile': PROFILE,
+            'current_year': datetime.now().year,
+        }
+
     return app
