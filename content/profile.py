@@ -5,7 +5,7 @@ Edit the values here — templates pull from this automatically.
 
 PROFILE = {
     # --- Identity ---
-    "name": "Dazlah",
+    "name": "Laban Wanjala",
     "title": "Software Engineer & IT Specialist",
     "tagline": "I design and build intelligent software — from network infrastructure to full-stack systems with machine learning baked in.",
 
@@ -37,13 +37,13 @@ PROFILE = {
     ],
 
     # --- Contact / links (EDIT THESE) ---
-    "email": "your.email@example.com",
+    "email": "wanjaladazlah@gmail.com",
     "github": "https://github.com/DazlahDjango",
     "location": "Kenya",
     "availability": "Available for freelance & contract work",
 
     # --- Social (leave blank string "" to hide) ---
-    "linkedin": "",
+    "linkedin": "www.linkedin.com/in/dazlah-wanjala-34910338a",
     "twitter": "",
     "whatsapp": "",
 }
