@@ -1,11 +1,18 @@
+import os
+
 from flask import (
     Blueprint, render_template, redirect, url_for,
     flash, current_app
 )
-from flask_mail import Message
+
+# Brevo HTTPS API — works on PythonAnywhere free tier (port 443)
+from brevo import Brevo
+from brevo.transactional_emails import (
+    SendTransacEmailRequestSender,
+    SendTransacEmailRequestToItem,
+)
 
 from app.forms import ContactForm
-from app import mail
 
 # Content data (editable by you)
 from content.skills import SKILL_CATEGORIES
@@ -46,23 +53,40 @@ def contact():
     form = ContactForm()
 
     if form.validate_on_submit():
-        msg = Message(
-            subject=f"New contact from {form.name.data}",
-            recipients=[current_app.config['CONTACT_RECEIVER_EMAIL']],
-            reply_to=form.email.data,
-        )
-        msg.body = (
-            f"Name: {form.name.data}\n"
-            f"Email: {form.email.data}\n\n"
-            f"Message:\n{form.message.data}"
-        )
-
         try:
-            mail.send(msg)
+            client = Brevo(api_key=os.environ.get('BREVO_API_KEY'))
+
+            client.transactional_emails.send_transac_email(
+                sender=SendTransacEmailRequestSender(
+                    email=os.environ.get('MAIL_DEFAULT_SENDER'),
+                    name=os.environ.get('MAIL_DEFAULT_SENDER_NAME', 'Portfolio Contact'),
+                ),
+                to=[
+                    SendTransacEmailRequestToItem(
+                        email=os.environ.get('CONTACT_RECEIVER_EMAIL'),
+                        name=os.environ.get('MAIL_DEFAULT_SENDER_NAME', 'Laban Wanjala'),
+                    ),
+                ],
+                reply_to=SendTransacEmailRequestToItem(
+                    email=form.email.data,
+                    name=form.name.data,
+                ),
+                subject=f"New contact from {form.name.data}",
+                html_content=f"""
+                    <h2>New Contact Form Submission</h2>
+                    <p><strong>Name:</strong> {form.name.data}</p>
+                    <p><strong>Email:</strong> {form.email.data}</p>
+                    <hr>
+                    <p><strong>Message:</strong></p>
+                    <p style="white-space: pre-wrap;">{form.message.data}</p>
+                """,
+            )
+
             flash("Thanks! Your message was sent successfully.", "success")
+
         except Exception as e:
             flash("Sorry, something went wrong sending your message. Please try again.", "error")
-            current_app.logger.exception(f"Mail send failed: {e}")
+            current_app.logger.exception(f"Brevo API send failed: {e}")
 
         return redirect(url_for('main.contact'))
 
