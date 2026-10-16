@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+        <p class="hero-eyebrow">{{ profile.availability }}</p>
+        <h1 class="hero-title">
+            Hi, I'm <span class="gold">{{ profile.name }}</span>.
+        </h1>
+        <h2 class="hero-subtitle">{{ profile.title }}</h2>
+        <p class="hero-tagline">{{ profile.tagline }}</p>
+
+        <div class="hero-actions">
+            <a href="{{ url_for('main.contact') }}" class="btn btn-primary">Hire Me</a>
+            <a href="{{ url_for('main.projects') }}" class="btn btn-ghost">View My Work</a>
+        </div>
+
+        <div class="hero-socials">
+            {% if profile.github %}
+            <a href="{{ profile.github }}" target="_blank" rel="noopener">GitHub</a>
+            {% endif %}
+            <a href="mailto:{{ profile.email }}">Email</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ QUICK STATS ============ -->
+<section class="section stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <p class="stat-number">5+</p>
+                <p class="stat-label">Years Coding</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-number">Full</p>
+                <p class="stat-label">Stack Engineer</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-number">End-to-End</p>
+                <p class="stat-label">Network & Infrastructure</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-number">ML</p>
+                <p class="stat-label">Integrated Systems</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WHAT I DO (PREVIEW) ============ -->
+<section class="section">
+    <div class="container">
+        <header class="section-header">
+            <p class="section-eyebrow">What I Do</p>
+            <h2 class="section-title">From Code to Cables</h2>
+            <p class="section-lead">
+                I work across the full technology stack — building the software,
+                designing the networks, and managing the hardware underneath.
+            </p>
+        </header>
+
+        <div class="preview-grid">
+            <div class="preview-card">
+                <div class="preview-icon">◆</div>
+                <h3>Software Engineering</h3>
+                <p>Django, Flask, REST APIs, and multitenant systems built for scale.</p>
+            </div>
+            <div class="preview-card">
+                <div class="preview-icon">◆</div>
+                <h3>AI & Machine Learning</h3>
+                <p>Intelligent features and data-driven insights woven into real systems.</p>
+            </div>
+            <div class="preview-card">
+                <div class="preview-icon">◆</div>
+                <h3>Networking</h3>
+                <p>Cisco and MikroTik design, configuration, and end-to-end deployment.</p>
+            </div>
+            <div class="preview-card">
+                <div class="preview-icon">◆</div>
+                <h3>Infrastructure</h3>
+                <p>Server rooms, labs, hardware, virtualization, and Docker.</p>
+            </div>
+        </div>
+
+        <div class="section-cta">
+            <a href="{{ url_for('main.services') }}" class="btn btn-outline">See All Services →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section cta-section">
+    <div class="container cta-container">
+        <h2 class="cta-title">Got a project in mind?</h2>
+        <p class="cta-text">Let's talk about what you need and how I can help.</p>
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary btn-lg">Get In Touch</a>
+    </div>
+</section>
+
+{% endblock %}

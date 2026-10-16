@@ -1,11 +1,17 @@
 from flask import (
     Blueprint, render_template, redirect, url_for,
-    flash, request, current_app
+    flash, current_app
 )
 from flask_mail import Message
 
 from app.forms import ContactForm
-from app import mail 
+from app import mail
+
+# Content data (editable by you)
+from content.skills import SKILL_CATEGORIES
+from content.services import SERVICES
+from content.projects import PROJECTS
+
 
 main = Blueprint('main', __name__)
 
@@ -22,17 +28,17 @@ def about():
 
 @main.route('/skills')
 def skills():
-    return render_template('skills.html')
+    return render_template('skills.html', skill_categories=SKILL_CATEGORIES)
 
 
 @main.route('/services')
 def services():
-    return render_template('services.html')
+    return render_template('services.html', services=SERVICES)
 
 
 @main.route('/projects')
 def projects():
-    return render_template('projects.html')
+    return render_template('projects.html', projects=PROJECTS)
 
 
 @main.route('/contact', methods=['GET', 'POST'])
@@ -40,7 +46,6 @@ def contact():
     form = ContactForm()
 
     if form.validate_on_submit():
-        # Build the email
         msg = Message(
             subject=f"New contact from {form.name.data}",
             recipients=[current_app.config['CONTACT_RECEIVER_EMAIL']],
@@ -57,7 +62,6 @@ def contact():
             flash("Thanks! Your message was sent successfully.", "success")
         except Exception as e:
             flash("Sorry, something went wrong sending your message. Please try again.", "error")
-            # Log the real error for debugging
             current_app.logger.exception(f"Mail send failed: {e}")
 
         return redirect(url_for('main.contact'))

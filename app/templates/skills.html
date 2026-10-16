@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <p class="page-eyebrow">Skills & Expertise</p>
+        <h1 class="page-title">What I Bring to the Table</h1>
+        <p class="page-lead">
+            A blend of software engineering, AI, networking, and infrastructure —
+            each skill sharpened by real projects, not just theory.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="skills-grid">
+            {% for category in skill_categories %}
+            <div class="skills-category">
+                <h2 class="skills-category-title">
+                    <span class="category-mark">◆</span>
+                    {{ category.name }}
+                </h2>
+
+                <ul class="skill-list">
+                    {% for skill in category.skills %}
+                    <li class="skill-item">
+                        <span class="skill-name">{{ skill.name }}</span>
+                        {% if skill.level %}
+                        <span class="skill-level" aria-label="Level {{ skill.level }} of 5">
+                            {% for i in range(1, 6) %}
+                            <span class="level-dot {{ 'filled' if i <= skill.level else '' }}"></span>
+                            {% endfor %}
+                        </span>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section cta-section">
+    <div class="container cta-container">
+        <h2 class="cta-title">Want to put these skills to work?</h2>
+        <p class="cta-text">Tell me about your project.</p>
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary btn-lg">Start a Conversation</a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <p class="page-eyebrow">About Me</p>
+        <h1 class="page-title">The Engineer Behind the Work</h1>
+        <p class="page-lead">{{ profile.short_bio }}</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container about-container">
+        <div class="about-text">
+            {% for paragraph in profile.full_bio %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
+        </div>
+
+        <aside class="about-sidebar">
+            <div class="info-card">
+                <h3 class="info-card-title">Quick Info</h3>
+                <ul class="info-list">
+                    <li>
+                        <span class="info-label">Role</span>
+                        <span class="info-value">{{ profile.title }}</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Location</span>
+                        <span class="info-value">{{ profile.location }}</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Status</span>
+                        <span class="info-value gold">{{ profile.availability }}</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Email</span>
+                        <span class="info-value"><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></span>
+                    </li>
+                    {% if profile.github %}
+                    <li>
+                        <span class="info-label">GitHub</span>
+                        <span class="info-value"><a href="{{ profile.github }}" target="_blank" rel="noopener">View
+                                Profile</a></span>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <div class="info-card highlight">
+                <h3 class="info-card-title">Let's Work Together</h3>
+                <p>Have a project or need advice on your systems?</p>
+                <a href="{{ url_for('main.contact') }}" class="btn btn-primary btn-block">Contact Me</a>
+            </div>
+        </aside>
+    </div>
+</section>
+
+{% endblock %}

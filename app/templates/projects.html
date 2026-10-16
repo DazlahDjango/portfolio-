@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <p class="page-eyebrow">Portfolio</p>
+        <h1 class="page-title">Selected Work</h1>
+        <p class="page-lead">
+            A sample of systems, tools, and infrastructure I've designed and built.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {% if projects %}
+        <div class="projects-grid">
+            {% for project in projects %}
+            <article class="project-card">
+                <div class="project-image">
+                    {% if project.image %}
+                    <img src="{{ url_for('static', filename='img/projects/' ~ project.image) }}"
+                        alt="{{ project.title }}">
+                    {% else %}
+                    <div class="project-placeholder">
+                        <span>◆</span>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="project-body">
+                    <p class="project-category">{{ project.category }}</p>
+                    <h2 class="project-title">{{ project.title }}</h2>
+                    <p class="project-description">{{ project.description }}</p>
+
+                    <div class="project-tech">
+                        {% for tech in project.tech %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+
+                    {% if project.link or project.repo %}
+                    <div class="project-links">
+                        {% if project.link %}<a href="{{ project.link }}" target="_blank" rel="noopener">Live →</a>{%
+                        endif %}
+                        {% if project.repo %}<a href="{{ project.repo }}" target="_blank" rel="noopener">Code →</a>{%
+                        endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="empty-state">Projects coming soon.</p>
+        {% endif %}
+    </div>
+</section>
+
+<section class="section cta-section">
+    <div class="container cta-container">
+        <h2 class="cta-title">Want something like this?</h2>
+        <p class="cta-text">Let's build it together.</p>
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary btn-lg">Get In Touch</a>
+    </div>
+</section>
+
+{% endblock %}
