@@ -77,4 +77,46 @@
             el.classList.add('visible');
         });
     }
+
+    // ---------------------------------------------
+    // 4. Profile Picture Lightbox Popup
+    // ---------------------------------------------
+    const lightbox = document.getElementById('profileLightbox');
+    const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const avatarButtons = document.querySelectorAll('.brand-avatar-btn');
+
+    function openLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    avatarButtons.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openLightbox();
+        });
+    });
+
+    if (lightboxBackdrop) {
+        lightboxBackdrop.addEventListener('click', closeLightbox);
+    }
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
 })();

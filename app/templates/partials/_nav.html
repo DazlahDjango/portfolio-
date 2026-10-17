@@ -1,9 +1,11 @@
 <nav class="nav" id="mainNav">
     <div class="nav-container">
-        <a href="{{ url_for('main.home') }}" class="nav-brand">
-            <span class="brand-mark">D</span>
-            <span class="brand-name">{{ profile.name }}</span>
-        </a>
+        <div class="nav-brand">
+            <button type="button" class="brand-avatar-btn" id="openProfileModal" aria-label="View profile photo" title="Click to view full picture">
+                <img src="{{ url_for('static', filename='img/profile.png') }}" alt="{{ profile.name }}" class="brand-mark">
+            </button>
+            <a href="{{ url_for('main.home') }}" class="brand-name">{{ profile.name }}</a>
+        </div>
 
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>

@@ -12,7 +12,7 @@ PROFILE = {
     # --- Short bio (shown on Home / About hero) ---
     "short_bio": (
         "IT degree student operating at professional level. I build production-grade "
-        "software with Django, Flask, and ML; design enterprise networks with Cisco and MikroTik; "
+        "software with Django, Flask, and ML; design enterprise networks with Cisco and the other network components; "
         "and manage the hardware, servers, and labs that keep everything running."
     ),
 
@@ -44,6 +44,6 @@ PROFILE = {
 
     # --- Social (leave blank string "" to hide) ---
     "linkedin": "www.linkedin.com/in/dazlah-wanjala-34910338a",
-    "twitter": "",
-    "whatsapp": "",
+    "twitter": "https://x.com/admiqvjr",
+    "whatsapp": "+254757480920",
 }

@@ -1,7 +1,9 @@
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-brand">
-            <span class="brand-mark">D</span>
+            <button type="button" class="brand-avatar-btn" aria-label="View profile photo" title="Click to view full picture">
+                <img src="{{ url_for('static', filename='img/profile.png') }}" alt="{{ profile.name }}" class="brand-mark">
+            </button>
             <div>
                 <p class="footer-name">{{ profile.name }}</p>
                 <p class="footer-tagline">{{ profile.title }}</p>
