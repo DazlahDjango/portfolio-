@@ -1,12 +1,16 @@
 import os
 
+
+# pyrefly: ignore[missing-import]
 from flask import (
     Blueprint, render_template, redirect, url_for,
-    flash, current_app
+    flash, current_app, request
 )
 
 # Brevo HTTPS API — works on PythonAnywhere free tier (port 443)
+# pyrefly: ignore[missing-import]
 from brevo import Brevo
+# pyrefly: ignore[missing-import]
 from brevo.transactional_emails import (
     SendTransacEmailRequestSender,
     SendTransacEmailRequestToItem,
@@ -18,6 +22,17 @@ from app.forms import ContactForm
 from content.skills import SKILL_CATEGORIES
 from content.services import SERVICES
 from content.projects import PROJECTS
+from content.catalogue_data import (
+    FRAMEWORKS,
+    SYSTEM_PROJECTS,
+    FRONTEND_OPTIONS,
+    DATABASE_OPTIONS,
+    ADDON_MODULES,
+    DEVOPS_OPTIONS,
+    PALETTES,
+    UI_STYLING_TIERS,
+    CURRENCIES,
+)
 
 
 main = Blueprint('main', __name__)
@@ -26,6 +41,22 @@ main = Blueprint('main', __name__)
 @main.route('/')
 def home():
     return render_template('index.html')
+
+
+@main.route('/estimator')
+def estimator():
+    return render_template(
+        'estimator.html',
+        frameworks=FRAMEWORKS,
+        projects=SYSTEM_PROJECTS,
+        frontends=FRONTEND_OPTIONS,
+        databases=DATABASE_OPTIONS,
+        addons=ADDON_MODULES,
+        devops=DEVOPS_OPTIONS,
+        palettes=PALETTES,
+        ui_tiers=UI_STYLING_TIERS,
+        currencies=CURRENCIES,
+    )
 
 
 @main.route('/about')
@@ -51,6 +82,10 @@ def projects():
 @main.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
+
+    # Pre-fill message if redirected from project estimator
+    if request.method == 'GET' and request.args.get('spec'):
+        form.message.data = request.args.get('spec')
 
     if form.validate_on_submit():
         try:

@@ -1,0 +1,593 @@
+DEVELOPER PORTFOLIO
+Project Catalogue
+& Pricing Guide
+Backend • Frontend • Databases • Python • AI • DevOps • UI palettes
+A practical catalogue for planning, quoting, licensing and presenting software development work.
+Currency reference (24 Oct 2026): US$1 ≈ KSh 129.85 ≈ €0.8911
+
+How to use this catalogue
+This guide is a pricing and portfolio-planning reference for a developer or small software studio. It starts with Flask, then covers Django and other backend choices, frontend applications, databases, standalone Python tools, AI/automation, infrastructure and full-stack combinations. The catalogue also includes supporting dependencies and 40 CSS colour palettes.
+Prices are suggested starting estimates, not fixed market quotations. They assume a legitimate, original implementation and vary with requirements, delivery deadlines, integrations, security, data migration, hosting, user volume, support commitments and local taxes.
+Pricing labels
+One-time build / purchase: indicative fee to design, build and hand over a project at the stated scope. It is not a price for buying a third-party framework.
+Monthly licence: an optional recurring fee for a hosted product, subscription access, updates or support. It is not automatically required for open-source software.
+Annual licence: the suggested yearly subscription amount, typically discounted compared with paying month by month.
+Currency order throughout: USD | Kenyan shillings (KES) | euros (EUR). Converted values use the reference rates on the cover and are rounded for readability.
+Open-source frameworks and libraries may be used without a software licence fee under their respective licences; hosting, support, development and managed services can still cost money.
+Quick pricing principles
+Small landing pages and utilities: keep the scope narrow and define the number of pages, forms and revisions.
+Business systems: price discovery, role-based access, audit trails, reporting, imports/exports and integrations separately where appropriate.
+SaaS / multi-tenant platforms: include tenant isolation, billing, monitoring, backups, disaster recovery, support and security testing in the estimate.
+Use milestones: discovery and specification, UI/design, core implementation, testing, deployment, handover and post-launch support.
+Write down what is excluded: cloud hosting, paid APIs, SMS/email usage, payment-provider charges, third-party subscriptions and future feature changes.
+
+Part 1 — Project catalogue and indicative pricing
+The following 299 entries are project/service ideas that can be adapted for a portfolio or client quotation. Build prices are suggested starting points for defined, small-to-medium scopes. Recurring prices are optional managed-service or hosted-product examples, not mandatory framework fees.
+Backend frameworks — Flask
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+1	Flask business website with contact forms	$650 | KSh 84,402 | €579	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+2	Flask REST API starter	$728 | KSh 94,531 | €649	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+3	Flask authentication and user portal	$806 | KSh 104,659 | €718	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+4	Flask inventory tracker	$884 | KSh 114,787 | €788	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+5	Flask booking and appointment system	$962 | KSh 124,916 | €857	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+6	Flask invoicing application	$650 | KSh 84,402 | €579	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+7	Flask employee directory	$728 | KSh 94,531 | €649	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+8	Flask customer support ticketing	$806 | KSh 104,659 | €718	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+9	Flask reporting dashboard API	$884 | KSh 114,787 | €788	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+10	Flask document upload and approval workflow	$962 | KSh 124,916 | €857	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+11	Flask school/college portal	$650 | KSh 84,402 | €579	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+12	Flask clinic administration MVP	$728 | KSh 94,531 | €649	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+13	Flask property listing platform	$806 | KSh 104,659 | €718	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+14	Flask e-commerce API	$884 | KSh 114,787 | €788	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+15	Flask subscription SaaS MVP	$962 | KSh 124,916 | €857	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+16	Flask multi-tenant SaaS foundation	$650 | KSh 84,402 | €579	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+17	Flask webhook integration service	$728 | KSh 94,531 | €649	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+18	Flask internal admin console	$806 | KSh 104,659 | €718	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+19	Flask data import/export tool	$884 | KSh 114,787 | €788	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+20	Flask geolocation-enabled service	$962 | KSh 124,916 | €857	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+
+Backend frameworks — Django / DRF
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+21	Django company website and CMS	$1,200 | KSh 155,820 | €1,069	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+22	Django REST API for a mobile app	$1,344 | KSh 174,518 | €1,198	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+23	Django user accounts and permissions	$1,488 | KSh 193,217 | €1,326	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+24	Django inventory and stock management	$1,632 | KSh 211,915 | €1,454	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+25	Django point-of-sale system	$1,776 | KSh 230,614 | €1,583	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+26	Django HR and leave management	$1,200 | KSh 155,820 | €1,069	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+27	Django school management system	$1,344 | KSh 174,518 | €1,198	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+28	Django clinic management system	$1,488 | KSh 193,217 | €1,326	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+29	Django property management system	$1,632 | KSh 211,915 | €1,454	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+30	Django hotel/booking management	$1,776 | KSh 230,614 | €1,583	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+31	Django e-commerce store	$1,200 | KSh 155,820 | €1,069	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+32	Django invoicing and finance portal	$1,344 | KSh 174,518 | €1,198	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+33	Django customer relationship management (CRM)	$1,488 | KSh 193,217 | €1,326	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+34	Django project/task management	$1,632 | KSh 211,915 | €1,454	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+35	Django document management	$1,776 | KSh 230,614 | €1,583	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+36	Django workflow and approvals engine	$1,200 | KSh 155,820 | €1,069	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+37	Django analytics and reporting portal	$1,344 | KSh 174,518 | €1,198	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+38	Django multi-tenant SaaS MVP	$1,488 | KSh 193,217 | €1,326	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+39	Django enterprise multi-tenant platform	$1,632 | KSh 211,915 | €1,454	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+40	Django tenant-aware billing module	$1,776 | KSh 230,614 | €1,583	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+41	Django audit and compliance module	$1,200 | KSh 155,820 | €1,069	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+42	Django notifications centre	$1,344 | KSh 174,518 | €1,198	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+43	Django role-based admin portal	$1,488 | KSh 193,217 | €1,326	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+44	Django supplier/vendor portal	$1,632 | KSh 211,915 | €1,454	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+45	Django API gateway/backend for React	$1,776 | KSh 230,614 | €1,583	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+46	Django real-time collaboration backend	$1,200 | KSh 155,820 | €1,069	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+47	Django marketplace backend	$1,344 | KSh 174,518 | €1,198	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+48	Django membership/subscription platform	$1,488 | KSh 193,217 | €1,326	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+49	Django booking marketplace	$1,632 | KSh 211,915 | €1,454	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+50	Django legacy-system migration	$1,776 | KSh 230,614 | €1,583	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+
+Backend frameworks — FastAPI
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+51	FastAPI CRUD service	$950 | KSh 123,358 | €847	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+52	FastAPI JWT authentication API	$1,064 | KSh 138,160 | €948	$22 | KSh 2,857 | €20	$232 | KSh 30,125 | €207
+53	FastAPI microservice starter	$1,178 | KSh 152,963 | €1,050	$24 | KSh 3,116 | €21	$253 | KSh 32,852 | €225
+54	FastAPI async data ingestion API	$1,292 | KSh 167,766 | €1,151	$26 | KSh 3,376 | €23	$275 | KSh 35,709 | €245
+55	FastAPI analytics service	$1,406 | KSh 182,569 | €1,253	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+56	FastAPI payment integration service	$950 | KSh 123,358 | €847	$22 | KSh 2,857 | €20	$232 | KSh 30,125 | €207
+57	FastAPI machine-learning inference API	$1,064 | KSh 138,160 | €948	$24 | KSh 3,116 | €21	$253 | KSh 32,852 | €225
+58	FastAPI vector-search endpoint	$1,178 | KSh 152,963 | €1,050	$26 | KSh 3,376 | €23	$275 | KSh 35,709 | €245
+59	FastAPI event/webhook processor	$1,292 | KSh 167,766 | €1,151	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+60	FastAPI high-throughput API platform	$1,406 | KSh 182,569 | €1,253	$22 | KSh 2,857 | €20	$232 | KSh 30,125 | €207
+
+Backend frameworks — other
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+61	Express.js REST API	$1,100 | KSh 142,835 | €980	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+62	NestJS enterprise API	$1,232 | KSh 159,975 | €1,098	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+63	Node.js real-time chat backend	$1,364 | KSh 177,115 | €1,215	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+64	Spring Boot business API	$1,496 | KSh 194,256 | €1,333	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+65	ASP.NET Core Web API	$1,628 | KSh 211,396 | €1,451	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+66	Laravel business application	$1,100 | KSh 142,835 | €980	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+67	Symfony API service	$1,232 | KSh 159,975 | €1,098	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+68	Ruby on Rails MVP	$1,364 | KSh 177,115 | €1,215	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+69	Go REST microservice	$1,496 | KSh 194,256 | €1,333	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+70	Go concurrent worker service	$1,628 | KSh 211,396 | €1,451	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+71	Phoenix/Elixir real-time app backend	$1,100 | KSh 142,835 | €980	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+72	ASP.NET identity and access module	$1,232 | KSh 159,975 | €1,098	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+73	GraphQL API layer	$1,364 | KSh 177,115 | €1,215	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+74	Serverless functions backend	$1,496 | KSh 194,256 | €1,333	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+75	BaaS integration layer	$1,628 | KSh 211,396 | €1,451	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+
+Frontend — websites and web apps
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+76	Responsive business landing page	$550 | KSh 71,418 | €490	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+77	Portfolio website	$616 | KSh 79,988 | €549	$11 | KSh 1,428 | €10	$116 | KSh 15,063 | €103
+78	Multi-page corporate website	$682 | KSh 88,558 | €608	$12 | KSh 1,558 | €11	$127 | KSh 16,491 | €113
+79	Product marketing website	$748 | KSh 97,128 | €667	$13 | KSh 1,688 | €12	$137 | KSh 17,789 | €122
+80	Blog and publishing website	$814 | KSh 105,698 | €725	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+81	Documentation website	$550 | KSh 71,418 | €490	$11 | KSh 1,428 | €10	$116 | KSh 15,063 | €103
+82	Restaurant/café website	$616 | KSh 79,988 | €549	$12 | KSh 1,558 | €11	$127 | KSh 16,491 | €113
+83	Agency website	$682 | KSh 88,558 | €608	$13 | KSh 1,688 | €12	$137 | KSh 17,789 | €122
+84	Event registration website	$748 | KSh 97,128 | €667	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+85	Online course marketing site	$814 | KSh 105,698 | €725	$11 | KSh 1,428 | €10	$116 | KSh 15,063 | €103
+86	Real-estate listing frontend	$550 | KSh 71,418 | €490	$12 | KSh 1,558 | €11	$127 | KSh 16,491 | €113
+87	Travel/tour booking frontend	$616 | KSh 79,988 | €549	$13 | KSh 1,688 | €12	$137 | KSh 17,789 | €122
+88	Job board frontend	$682 | KSh 88,558 | €608	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+89	Directory/search frontend	$748 | KSh 97,128 | €667	$11 | KSh 1,428 | €10	$116 | KSh 15,063 | €103
+90	Membership website frontend	$814 | KSh 105,698 | €725	$12 | KSh 1,558 | €11	$127 | KSh 16,491 | €113
+91	Accessible form-heavy web app	$550 | KSh 71,418 | €490	$13 | KSh 1,688 | €12	$137 | KSh 17,789 | €122
+92	Admin dashboard UI	$616 | KSh 79,988 | €549	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+93	Analytics dashboard UI	$682 | KSh 88,558 | €608	$11 | KSh 1,428 | €10	$116 | KSh 15,063 | €103
+94	Customer self-service portal	$748 | KSh 97,128 | €667	$12 | KSh 1,558 | €11	$127 | KSh 16,491 | €113
+95	Employee self-service portal	$814 | KSh 105,698 | €725	$13 | KSh 1,688 | €12	$137 | KSh 17,789 | €122
+96	CRM frontend	$550 | KSh 71,418 | €490	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+97	Inventory management frontend	$616 | KSh 79,988 | €549	$11 | KSh 1,428 | €10	$116 | KSh 15,063 | €103
+98	Finance dashboard frontend	$682 | KSh 88,558 | €608	$12 | KSh 1,558 | €11	$127 | KSh 16,491 | €113
+99	Project management web app	$748 | KSh 97,128 | €667	$13 | KSh 1,688 | €12	$137 | KSh 17,789 | €122
+100	Kanban task board	$814 | KSh 105,698 | €725	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+101	Real-time chat interface	$550 | KSh 71,418 | €490	$11 | KSh 1,428 | €10	$116 | KSh 15,063 | €103
+102	E-commerce storefront	$616 | KSh 79,988 | €549	$12 | KSh 1,558 | €11	$127 | KSh 16,491 | €113
+103	Marketplace storefront	$682 | KSh 88,558 | €608	$13 | KSh 1,688 | €12	$137 | KSh 17,789 | €122
+104	Subscription account portal	$748 | KSh 97,128 | €667	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+105	Multi-step onboarding flow	$814 | KSh 105,698 | €725	$11 | KSh 1,428 | €10	$116 | KSh 15,063 | €103
+106	Design system/component library	$550 | KSh 71,418 | €490	$12 | KSh 1,558 | €11	$127 | KSh 16,491 | €113
+
+Frontend — frameworks and mobile
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+107	React SPA	$1,000 | KSh 129,850 | €891	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+108	React + TypeScript enterprise frontend	$1,120 | KSh 145,432 | €998	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+109	Next.js SEO-focused website	$1,240 | KSh 161,014 | €1,105	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+110	Next.js full-stack starter	$1,360 | KSh 176,596 | €1,212	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+111	Vue.js business dashboard	$1,480 | KSh 192,178 | €1,319	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+112	Nuxt content website	$1,000 | KSh 129,850 | €891	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+113	Angular enterprise portal	$1,120 | KSh 145,432 | €998	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+114	SvelteKit application	$1,240 | KSh 161,014 | €1,105	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+115	SolidJS lightweight application	$1,360 | KSh 176,596 | €1,212	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+116	Astro content-first site	$1,480 | KSh 192,178 | €1,319	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+117	Ionic hybrid mobile app	$1,000 | KSh 129,850 | €891	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+118	React Native mobile MVP	$1,120 | KSh 145,432 | €998	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+119	Flutter mobile app UI	$1,240 | KSh 161,014 | €1,105	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+120	Progressive web app (PWA)	$1,360 | KSh 176,596 | €1,212	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+121	Electron desktop utility	$1,480 | KSh 192,178 | €1,319	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+
+Databases and data platforms
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+122	PostgreSQL schema and query design	$700 | KSh 90,895 | €624	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+123	PostgreSQL performance tuning package	$784 | KSh 101,802 | €699	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+124	PostgreSQL reporting/data mart	$868 | KSh 112,710 | €773	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+125	PostgreSQL row-level security setup	$952 | KSh 123,617 | €848	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+126	PostgreSQL tenant-isolation design	$1,036 | KSh 134,525 | €923	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+127	MySQL business database	$700 | KSh 90,895 | €624	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+128	MariaDB migration and optimisation	$784 | KSh 101,802 | €699	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+129	SQLite local-first application database	$868 | KSh 112,710 | €773	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+130	MongoDB document database design	$952 | KSh 123,617 | €848	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+131	Redis caching and session layer	$1,036 | KSh 134,525 | €923	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+132	Redis queue and rate-limit setup	$700 | KSh 90,895 | €624	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+133	Elasticsearch/OpenSearch search integration	$784 | KSh 101,802 | €699	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+134	Meilisearch site search integration	$868 | KSh 112,710 | €773	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+135	ClickHouse analytics data store	$952 | KSh 123,617 | €848	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+136	TimescaleDB time-series setup	$1,036 | KSh 134,525 | €923	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+137	Neo4j graph database prototype	$700 | KSh 90,895 | €624	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+138	Qdrant vector database integration	$784 | KSh 101,802 | €699	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+139	pgvector semantic search setup	$868 | KSh 112,710 | €773	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+140	Data warehouse ETL pipeline	$952 | KSh 123,617 | €848	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+141	Database backup and restore automation	$1,036 | KSh 134,525 | €923	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+
+Standalone Python / automation
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+142	Python file organiser	$250 | KSh 32,462 | €223	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+143	CSV/Excel processing utility	$300 | KSh 38,955 | €267	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+144	PDF report generator	$350 | KSh 45,448 | €312	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+145	Invoice/receipt generator	$400 | KSh 51,940 | €356	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+146	Automated email report sender	$450 | KSh 58,432 | €401	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+147	Web scraping for permitted public data	$250 | KSh 32,462 | €223	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+148	Data cleaning and validation pipeline	$300 | KSh 38,955 | €267	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+149	Excel reconciliation automation	$350 | KSh 45,448 | €312	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+150	Folder monitoring automation	$400 | KSh 51,940 | €356	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+151	Scheduled backup script	$450 | KSh 58,432 | €401	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+152	API-to-API synchronisation tool	$250 | KSh 32,462 | €223	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+153	Bulk image resize/conversion utility	$300 | KSh 38,955 | €267	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+154	Log parser and alerting script	$350 | KSh 45,448 | €312	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+155	PDF text extraction workflow	$400 | KSh 51,940 | €356	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+156	Document merge/split utility	$450 | KSh 58,432 | €401	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+157	CLI administration tool	$250 | KSh 32,462 | €223	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+158	Desktop utility with Tkinter	$300 | KSh 38,955 | €267	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+159	GUI data-entry utility	$350 | KSh 45,448 | €312	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+160	SFTP file transfer automation	$400 | KSh 51,940 | €356	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+161	Data migration script	$450 | KSh 58,432 | €401	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+162	Automated test runner	$250 | KSh 32,462 | €223	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+163	Website uptime checker	$300 | KSh 38,955 | €267	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+164	Certificate expiry checker	$350 | KSh 45,448 | €312	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+165	System health report tool	$400 | KSh 51,940 | €356	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+166	Personal finance tracker	$450 | KSh 58,432 | €401	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+167	Expense categorisation utility	$250 | KSh 32,462 | €223	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+168	Barcode/QR code generator	$300 | KSh 38,955 | €267	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+169	Barcode stocktaking utility	$350 | KSh 45,448 | €312	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+170	Email attachment processor	$400 | KSh 51,940 | €356	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+171	Calendar/task reminder integration	$450 | KSh 58,432 | €401	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+
+AI, analytics and intelligent workflows
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+172	FAQ chatbot with curated knowledge	$900 | KSh 116,865 | €802	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+173	Customer-support assistant prototype	$1,008 | KSh 130,889 | €898	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+174	Document question-answering RAG app	$1,116 | KSh 144,913 | €994	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+175	Semantic search for company documents	$1,224 | KSh 158,936 | €1,091	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+176	AI meeting-notes summariser	$1,332 | KSh 172,960 | €1,187	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+177	OCR document capture workflow	$900 | KSh 116,865 | €802	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+178	Invoice data extraction prototype	$1,008 | KSh 130,889 | €898	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+179	Product recommendation prototype	$1,116 | KSh 144,913 | €994	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+180	Text classification pipeline	$1,224 | KSh 158,936 | €1,091	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+181	Sentiment analysis dashboard	$1,332 | KSh 172,960 | €1,187	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+182	Forecasting and trend dashboard	$900 | KSh 116,865 | €802	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+183	Anomaly detection proof of concept	$1,008 | KSh 130,889 | €898	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+184	Image classification API	$1,116 | KSh 144,913 | €994	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+185	Speech-to-text workflow integration	$1,224 | KSh 158,936 | €1,091	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+186	AI-assisted report drafting tool	$1,332 | KSh 172,960 | €1,187	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+187	Knowledge-base search portal	$900 | KSh 116,865 | €802	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+188	Vector database + embedding pipeline	$1,008 | KSh 130,889 | €898	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+189	LLM provider integration layer	$1,116 | KSh 144,913 | €994	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254
+190	AI usage metering and cost dashboard	$1,224 | KSh 158,936 | €1,091	$29 | KSh 3,766 | €26	$306 | KSh 39,734 | €273
+191	Human review queue for AI outputs	$1,332 | KSh 172,960 | €1,187	$31 | KSh 4,025 | €28	$327 | KSh 42,461 | €291
+
+DevOps, deployment and reliability
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+192	Dockerise a web application	$500 | KSh 64,925 | €446	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+193	Docker Compose development stack	$560 | KSh 72,716 | €499	$22 | KSh 2,857 | €20	$232 | KSh 30,125 | €207
+194	Production Nginx reverse proxy	$620 | KSh 80,507 | €552	$24 | KSh 3,116 | €21	$253 | KSh 32,852 | €225
+195	Linux VPS deployment setup	$680 | KSh 88,298 | €606	$26 | KSh 3,376 | €23	$275 | KSh 35,709 | €245
+196	CI/CD pipeline for GitHub	$740 | KSh 96,089 | €659	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+197	GitHub Actions test-and-deploy pipeline	$500 | KSh 64,925 | €446	$22 | KSh 2,857 | €20	$232 | KSh 30,125 | €207
+198	TLS/SSL certificate setup and renewal	$560 | KSh 72,716 | €499	$24 | KSh 3,116 | €21	$253 | KSh 32,852 | €225
+199	PostgreSQL backup automation	$620 | KSh 80,507 | €552	$26 | KSh 3,376 | €23	$275 | KSh 35,709 | €245
+200	Disaster-recovery runbook and test	$680 | KSh 88,298 | €606	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+201	Redis/Celery worker deployment	$740 | KSh 96,089 | €659	$22 | KSh 2,857 | €20	$232 | KSh 30,125 | €207
+202	Celery beat scheduled-task setup	$500 | KSh 64,925 | €446	$24 | KSh 3,116 | €21	$253 | KSh 32,852 | €225
+203	Application logging and rotation	$560 | KSh 72,716 | €499	$26 | KSh 3,376 | €23	$275 | KSh 35,709 | €245
+204	Prometheus/Grafana monitoring starter	$620 | KSh 80,507 | €552	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+205	Error tracking integration	$680 | KSh 88,298 | €606	$22 | KSh 2,857 | €20	$232 | KSh 30,125 | €207
+206	Uptime and endpoint monitoring	$740 | KSh 96,089 | €659	$24 | KSh 3,116 | €21	$253 | KSh 32,852 | €225
+207	Cloud object-storage integration	$500 | KSh 64,925 | €446	$26 | KSh 3,376 | €23	$275 | KSh 35,709 | €245
+208	S3-compatible media storage setup	$560 | KSh 72,716 | €499	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+209	Kubernetes proof-of-concept deployment	$620 | KSh 80,507 | €552	$22 | KSh 2,857 | €20	$232 | KSh 30,125 | €207
+210	Kubernetes production baseline	$680 | KSh 88,298 | €606	$24 | KSh 3,116 | €21	$253 | KSh 32,852 | €225
+211	Secrets and environment configuration hardening	$740 | KSh 96,089 | €659	$26 | KSh 3,376 | €23	$275 | KSh 35,709 | €245
+212	Firewall and SSH hardening	$500 | KSh 64,925 | €446	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+213	Load balancer setup	$560 | KSh 72,716 | €499	$22 | KSh 2,857 | €20	$232 | KSh 30,125 | €207
+214	PgBouncer connection pooling setup	$620 | KSh 80,507 | €552	$24 | KSh 3,116 | €21	$253 | KSh 32,852 | €225
+215	Zero-downtime deployment plan	$680 | KSh 88,298 | €606	$26 | KSh 3,376 | €23	$275 | KSh 35,709 | €245
+216	Staging and production environment setup	$740 | KSh 96,089 | €659	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+
+Business systems and sector solutions
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+217	Small business management system	$1,800 | KSh 233,730 | €1,604	$35 | KSh 4,545 | €31	$370 | KSh 48,044 | €330
+218	Enterprise resource planning (ERP) MVP	$2,016 | KSh 261,778 | €1,796	$38 | KSh 4,934 | €34	$401 | KSh 52,070 | €357
+219	Customer relationship management (CRM)	$2,232 | KSh 289,825 | €1,989	$41 | KSh 5,324 | €37	$433 | KSh 56,225 | €386
+220	Human resource management system	$2,448 | KSh 317,873 | €2,181	$44 | KSh 5,713 | €39	$465 | KSh 60,380 | €414
+221	Payroll preparation and payslip portal	$2,664 | KSh 345,920 | €2,374	$35 | KSh 4,545 | €31	$370 | KSh 48,044 | €330
+222	School management system	$1,800 | KSh 233,730 | €1,604	$38 | KSh 4,934 | €34	$401 | KSh 52,070 | €357
+223	Learning management system	$2,016 | KSh 261,778 | €1,796	$41 | KSh 5,324 | €37	$433 | KSh 56,225 | €386
+224	Hospital/clinic management system	$2,232 | KSh 289,825 | €1,989	$44 | KSh 5,713 | €39	$465 | KSh 60,380 | €414
+225	Pharmacy inventory system	$2,448 | KSh 317,873 | €2,181	$35 | KSh 4,545 | €31	$370 | KSh 48,044 | €330
+226	Laboratory sample tracking system	$2,664 | KSh 345,920 | €2,374	$38 | KSh 4,934 | €34	$401 | KSh 52,070 | €357
+227	Hotel property management system	$1,800 | KSh 233,730 | €1,604	$41 | KSh 5,324 | €37	$433 | KSh 56,225 | €386
+228	Property/rental management system	$2,016 | KSh 261,778 | €1,796	$44 | KSh 5,713 | €39	$465 | KSh 60,380 | €414
+229	Fleet and vehicle maintenance tracker	$2,232 | KSh 289,825 | €1,989	$35 | KSh 4,545 | €31	$370 | KSh 48,044 | €330
+230	Delivery dispatch and tracking system	$2,448 | KSh 317,873 | €2,181	$38 | KSh 4,934 | €34	$401 | KSh 52,070 | €357
+231	Warehouse management system	$2,664 | KSh 345,920 | €2,374	$41 | KSh 5,324 | €37	$433 | KSh 56,225 | €386
+232	Retail POS and stock system	$1,800 | KSh 233,730 | €1,604	$44 | KSh 5,713 | €39	$465 | KSh 60,380 | €414
+233	Restaurant ordering and table management	$2,016 | KSh 261,778 | €1,796	$35 | KSh 4,545 | €31	$370 | KSh 48,044 | €330
+234	Salon/spa appointment system	$2,232 | KSh 289,825 | €1,989	$38 | KSh 4,934 | €34	$401 | KSh 52,070 | €357
+235	Gym membership management system	$2,448 | KSh 317,873 | €2,181	$41 | KSh 5,324 | €37	$433 | KSh 56,225 | €386
+236	Church/community membership portal	$2,664 | KSh 345,920 | €2,374	$44 | KSh 5,713 | €39	$465 | KSh 60,380 | €414
+237	NGO beneficiary tracking system	$1,800 | KSh 233,730 | €1,604	$35 | KSh 4,545 | €31	$370 | KSh 48,044 | €330
+238	Microfinance loan tracking prototype	$2,016 | KSh 261,778 | €1,796	$38 | KSh 4,934 | €34	$401 | KSh 52,070 | €357
+239	SACCO member self-service portal	$2,232 | KSh 289,825 | €1,989	$41 | KSh 5,324 | €37	$433 | KSh 56,225 | €386
+240	Insurance claims workflow portal	$2,448 | KSh 317,873 | €2,181	$44 | KSh 5,713 | €39	$465 | KSh 60,380 | €414
+241	Legal case and document tracker	$2,664 | KSh 345,920 | €2,374	$35 | KSh 4,545 | €31	$370 | KSh 48,044 | €330
+242	Construction project tracker	$1,800 | KSh 233,730 | €1,604	$38 | KSh 4,934 | €34	$401 | KSh 52,070 | €357
+243	Manufacturing work-order tracker	$2,016 | KSh 261,778 | €1,796	$41 | KSh 5,324 | €37	$433 | KSh 56,225 | €386
+244	Farm produce and input tracker	$2,232 | KSh 289,825 | €1,989	$44 | KSh 5,713 | €39	$465 | KSh 60,380 | €414
+245	Water delivery/customer billing system	$2,448 | KSh 317,873 | €2,181	$35 | KSh 4,545 | €31	$370 | KSh 48,044 | €330
+246	Utility meter-reading portal	$2,664 | KSh 345,920 | €2,374	$38 | KSh 4,934 | €34	$401 | KSh 52,070 | €357
+
+Security, integrations and platform modules
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+247	Multi-factor authentication integration	$750 | KSh 97,388 | €668	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+248	Single sign-on integration	$840 | KSh 109,074 | €749	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+249	Role-based access control module	$930 | KSh 120,760 | €829	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+250	Audit log and activity history module	$1,020 | KSh 132,447 | €909	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+251	Tenant-aware permissions module	$1,110 | KSh 144,134 | €989	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+252	API rate limiting and throttling	$750 | KSh 97,388 | €668	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+253	Webhook signature verification	$840 | KSh 109,074 | €749	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+254	Payment gateway integration	$930 | KSh 120,760 | €829	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+255	Email provider integration	$1,020 | KSh 132,447 | €909	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+256	SMS provider integration	$1,110 | KSh 144,134 | €989	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+257	OAuth social login integration	$750 | KSh 97,388 | €668	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+258	Data export and privacy-request workflow	$840 | KSh 109,074 | €749	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+259	File upload scanning workflow	$930 | KSh 120,760 | €829	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+260	Sensitive data encryption design	$1,020 | KSh 132,447 | €909	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+261	Security review and remediation sprint	$1,110 | KSh 144,134 | €989	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+262	API documentation portal	$750 | KSh 97,388 | €668	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+263	OpenAPI/Swagger setup	$840 | KSh 109,074 | €749	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+264	Feature flags module	$930 | KSh 120,760 | €829	$16 | KSh 2,078 | €14	$169 | KSh 21,945 | €151
+265	Usage quotas and metering	$1,020 | KSh 132,447 | €909	$17 | KSh 2,207 | €15	$180 | KSh 23,373 | €160
+266	Tenant provisioning automation	$1,110 | KSh 144,134 | €989	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169
+
+Additional portfolio modules — Flask
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+267	API versioning and throttling module (scope variant 1)	$600 | KSh 77,910 | €535	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+268	API versioning and throttling module (scope variant 2)	$720 | KSh 93,492 | €642	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+269	API versioning and throttling module (scope variant 3)	$600 | KSh 77,910 | €535	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+270	API versioning and throttling module (scope variant 4)	$720 | KSh 93,492 | €642	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+
+Additional portfolio modules — Django
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+271	Tenant-aware notifications and email templates (scope variant 1)	$935 | KSh 121,410 | €833	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+272	Tenant-aware notifications and email templates (scope variant 2)	$1,105 | KSh 143,484 | €985	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+273	Tenant-aware notifications and email templates (scope variant 3)	$935 | KSh 121,410 | €833	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+274	Tenant-aware notifications and email templates (scope variant 4)	$1,105 | KSh 143,484 | €985	$20 | KSh 2,597 | €18	$211 | KSh 27,398 | €188
+
+Additional portfolio modules — React
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+275	Reusable accessible UI component pack (scope variant 1)	$780 | KSh 101,283 | €695	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+276	Reusable accessible UI component pack (scope variant 2)	$650 | KSh 84,402 | €579	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+277	Reusable accessible UI component pack (scope variant 3)	$780 | KSh 101,283 | €695	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+278	Reusable accessible UI component pack (scope variant 4)	$650 | KSh 84,402 | €579	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+
+Additional portfolio modules — Database
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+279	Data quality checks and integrity reporting (scope variant 1)	$910 | KSh 118,164 | €811	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+280	Data quality checks and integrity reporting (scope variant 2)	$770 | KSh 99,984 | €686	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+281	Data quality checks and integrity reporting (scope variant 3)	$910 | KSh 118,164 | €811	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+
+Additional portfolio modules — Python
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+282	Scheduled browser-based admin workflow (scope variant 1)	$400 | KSh 51,940 | €356	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+283	Scheduled browser-based admin workflow (scope variant 2)	$480 | KSh 62,328 | €428	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+284	Scheduled browser-based admin workflow (scope variant 3)	$400 | KSh 51,940 | €356	$5 | KSh 649 | €4	$53 | KSh 6,882 | €47
+
+Additional portfolio modules — AI
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+285	AI output evaluation and human feedback loop (scope variant 1)	$1,045 | KSh 135,693 | €931	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+286	AI output evaluation and human feedback loop (scope variant 2)	$1,235 | KSh 160,365 | €1,101	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+287	AI output evaluation and human feedback loop (scope variant 3)	$1,045 | KSh 135,693 | €931	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+
+Additional portfolio modules — DevOps
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+288	Production deployment checklist and runbook (scope variant 1)	$540 | KSh 70,119 | €481	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+289	Production deployment checklist and runbook (scope variant 2)	$450 | KSh 58,432 | €401	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+290	Production deployment checklist and runbook (scope variant 3)	$540 | KSh 70,119 | €481	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+
+Additional portfolio modules — Business
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+291	Management reporting and KPI dashboard (scope variant 1)	$1,820 | KSh 236,327 | €1,622	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+292	Management reporting and KPI dashboard (scope variant 2)	$1,540 | KSh 199,969 | €1,372	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+293	Management reporting and KPI dashboard (scope variant 3)	$1,820 | KSh 236,327 | €1,622	$25 | KSh 3,246 | €22	$264 | KSh 34,280 | €235
+
+Additional portfolio modules — Platform
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+294	API keys and developer access portal (scope variant 1)	$800 | KSh 103,880 | €713	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+295	API keys and developer access portal (scope variant 2)	$960 | KSh 124,656 | €855	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+296	API keys and developer access portal (scope variant 3)	$800 | KSh 103,880 | €713	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141
+
+Additional portfolio modules — Frontend
+#	Project / deliverable	One-time build estimate
+USD | KES | EUR	Monthly service / licence
+USD | KES | EUR	Annual service / licence
+USD | KES | EUR
+297	Responsive settings and profile module (scope variant 1)	$550 | KSh 71,418 | €490	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+298	Responsive settings and profile module (scope variant 2)	$650 | KSh 84,402 | €579	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+299	Responsive settings and profile module (scope variant 3)	$550 | KSh 71,418 | €490	$10 | KSh 1,298 | €9	$106 | KSh 13,764 | €94
+
+Part 2 — Twenty full-stack combinations
+These combinations show practical technology pairings. Choose based on project requirements, team skill, security needs, operating cost and expected traffic.
+#	Technology combination	Typical use	Build estimate
+USD | KES | EUR	Monthly managed service
+USD | KES | EUR	Annual managed service
+USD | KES | EUR	Practical note
+1	Flask + Jinja + SQLite	Small brochure site, prototype or local utility	$1,000 | KSh 129,850 | €891	$15 | KSh 1,948 | €13	$158 | KSh 20,516 | €141	Very simple deployment; migrate to PostgreSQL if the product grows.
+2	Flask + React + PostgreSQL	Custom dashboard or API-backed portal	$1,800 | KSh 233,730 | €1,604	$21 | KSh 2,727 | €19	$221 | KSh 28,697 | €197	Clear separation between frontend and API.
+3	Flask + Vue + PostgreSQL	Lightweight business web application	$1,600 | KSh 207,760 | €1,426	$19 | KSh 2,467 | €17	$200 | KSh 25,970 | €178	Useful when a smaller frontend is preferred.
+4	Django + Django Templates + PostgreSQL	Content-rich business system	$1,500 | KSh 194,775 | €1,337	$18 | KSh 2,337 | €16	$190 | KSh 24,672 | €169	Fast delivery with built-in admin and authentication.
+5	Django REST Framework + React + PostgreSQL	Enterprise SaaS and multi-role portals	$3,200 | KSh 415,520 | €2,852	$38 | KSh 4,934 | €34	$401 | KSh 52,070 | €357	Strong fit for API-led products and complex permissions.
+6	Django REST Framework + React + Redis + Celery	Background jobs, notifications and reports	$4,200 | KSh 545,370 | €3,743	$50 | KSh 6,492 | €45	$528 | KSh 68,561 | €471	Redis broker/cache plus asynchronous task workers.
+7	Django + HTMX + PostgreSQL	Operations system with modest frontend complexity	$1,800 | KSh 233,730 | €1,604	$21 | KSh 2,727 | €19	$221 | KSh 28,697 | €197	Less JavaScript infrastructure for many form-driven workflows.
+8	FastAPI + React + PostgreSQL	Async API service with rich frontend	$2,200 | KSh 285,670 | €1,960	$26 | KSh 3,376 | €23	$274 | KSh 35,579 | €244	Good fit for API-centric or data-heavy products.
+9	FastAPI + Vue + PostgreSQL	Service portal or analytics UI	$1,900 | KSh 246,715 | €1,693	$22 | KSh 2,857 | €20	$232 | KSh 30,125 | €207	Simple separation between UI and API.
+10	FastAPI + Redis + Celery/RQ	Long-running processing and integrations	$2,300 | KSh 298,655 | €2,050	$27 | KSh 3,506 | €24	$285 | KSh 37,007 | €254	Use a worker queue for jobs that should not block requests.
+11	Express.js + React + PostgreSQL	JavaScript full-stack web app	$2,200 | KSh 285,670 | €1,960	$26 | KSh 3,376 | €23	$274 | KSh 35,579 | €244	Shared language across frontend and backend.
+12	NestJS + Angular + PostgreSQL	Structured enterprise portal	$3,500 | KSh 454,475 | €3,119	$42 | KSh 5,454 | €37	$443 | KSh 57,524 | €395	Opinionated TypeScript architecture.
+13	Next.js + PostgreSQL	SEO-sensitive site with dynamic features	$2,400 | KSh 311,640 | €2,139	$28 | KSh 3,636 | €25	$295 | KSh 38,306 | €263	Can combine server rendering and interactive pages.
+14	Next.js + Django API + PostgreSQL	Marketing site plus enterprise backend	$3,800 | KSh 493,430 | €3,386	$45 | KSh 5,843 | €40	$475 | KSh 61,679 | €423	Useful when content delivery and business logic have different needs.
+15	Laravel + Vue + MySQL	Business portal or e-commerce solution	$2,200 | KSh 285,670 | €1,960	$26 | KSh 3,376 | €23	$274 | KSh 35,579 | €244	Productive PHP ecosystem with a mature ORM.
+16	Spring Boot + Angular + PostgreSQL	Large enterprise system	$4,500 | KSh 584,325 | €4,010	$54 | KSh 7,012 | €48	$570 | KSh 74,014 | €508	Strong conventions and broad enterprise tooling.
+17	ASP.NET Core + React + SQL Server	Microsoft-oriented business application	$4,200 | KSh 545,370 | €3,743	$50 | KSh 6,492 | €45	$528 | KSh 68,561 | €471	Often fits organizations already invested in Microsoft tooling.
+18	Go API + React + PostgreSQL	Lean, high-throughput service	$2,800 | KSh 363,580 | €2,495	$33 | KSh 4,285 | €29	$348 | KSh 45,188 | €310	Good for focused APIs and concurrency-heavy workloads.
+19	React Native + Django REST Framework	Cross-platform mobile client with central API	$3,500 | KSh 454,475 | €3,119	$42 | KSh 5,454 | €37	$443 | KSh 57,524 | €395	Keep business rules and permissions in the backend.
+20	Flutter + FastAPI + PostgreSQL	Cross-platform mobile application	$3,400 | KSh 441,490 | €3,030	$40 | KSh 5,194 | €36	$422 | KSh 54,797 | €376	Shared mobile UI with a separately deployable API.
+
+Part 3 — Dependencies and supporting services
+Dependencies are selected according to the actual architecture. Avoid installing every package in a catalogue: choose only what the application needs, pin compatible versions, scan dependencies and keep a lock/requirements file.
+Flask / Python backend
+Flask; Werkzeug; Jinja2; Flask-SQLAlchemy or SQLAlchemy; Flask-Migrate/Alembic; Flask-Login or a token library; Flask-WTF where forms/CSRF are used; Marshmallow or Pydantic; pytest; Ruff; Gunicorn or Waitress; python-dotenv for local development.
+Django / REST APIs
+Django; Django REST Framework; SimpleJWT or another chosen auth mechanism; django-filter; drf-spectacular; django-cors-headers only when required; django-environ; psycopg; django-redis; Celery; django-celery-beat when scheduled tasks are needed; pytest-django; Ruff; Gunicorn or Daphne/Uvicorn depending on ASGI/WSGI needs.
+Frontend
+React/Vue/Angular/Svelte as selected; TypeScript; Vite or framework-native tooling; React Router or equivalent; TanStack Query or equivalent data-fetching library; Zod or another schema validator; accessible component primitives; ESLint; Prettier; Vitest/Jest; Playwright/Cypress; an approved icon library.
+Databases and storage
+PostgreSQL or MySQL/MariaDB; psycopg or matching driver; Redis for cache/queues where needed; object storage for user uploads and backups; migration tooling; connection pooling where justified; backup verification and restore drills.
+Background tasks and messaging
+Celery with Redis/RabbitMQ where appropriate; task retry/idempotency rules; dead-letter/retry monitoring where supported; email provider SDK; SMS provider SDK only when required; webhook verification; scheduled jobs via Celery Beat or a controlled scheduler.
+Production and operations
+Docker; Docker Compose for local/multi-service development; Nginx or a managed reverse proxy; TLS certificates; environment/secret management; CI/CD; structured logs; error tracking; uptime checks; metrics and alerting; backup encryption; disaster recovery runbook; firewall and SSH hardening.
+Suggested baseline for a Django SaaS
+Area	Suggested baseline
+Application	Django + Django REST Framework; split settings by environment; clear apps and service boundaries.
+Data	PostgreSQL with migrations, constraints and tested backups; use tenant-scoped query controls and database-level protections where appropriate.
+Cache and jobs	Redis for caching/queues; Celery workers for email, reports and long-running tasks; define retries and idempotency.
+Frontend	React + TypeScript + Vite or another intentionally selected framework; validate API contracts and manage auth carefully.
+Security	MFA where appropriate, secure cookies/tokens, least privilege, audit logs, rate limiting, CSRF/CORS configuration, secrets management and dependency updates.
+Deployment	Docker images, reverse proxy, TLS, health checks, monitoring, logs, scheduled backups and tested restore/disaster recovery procedures.
+Scale	Add load balancing, connection pooling, object storage, worker scaling and orchestration such as Kubernetes only when operational needs justify the added complexity.
+
+Part 4 — Forty CSS colour palettes
+Use these hex values as starting points for a UI theme. Test text contrast for accessibility (WCAG), especially for small text and controls. Palette names are descriptive, not official standards.
+Palette	Primary	Secondary	Accent	Soft / highlight	Background
+01 Ocean Professional	#0B1F3A	#145DA0	#2E8BC0	#B1D4E0	#F4F8FB
+02 Midnight Blue	#0A192F	#172A45	#64FFDA	#8892B0	#CCD6F6
+03 Corporate Blue	#16324F	#245B8F	#4C9FCE	#D7EAF5	#F7FAFC
+04 Indigo SaaS	#312E81	#4338CA	#818CF8	#C7D2FE	#EEF2FF
+05 Purple Gradient	#2E1065	#6D28D9	#A78BFA	#DDD6FE	#FAF5FF
+06 Emerald Finance	#064E3B	#047857	#34D399	#A7F3D0	#ECFDF5
+07 Forest Green	#12372A	#436850	#ADBC9F	#FBFADA	#F6F7F2
+08 Teal Modern	#134E4A	#0F766E	#2DD4BF	#99F6E4	#F0FDFA
+09 Mint Minimal	#14532D	#16A34A	#86EFAC	#DCFCE7	#F7FEF9
+10 Lime Energy	#365314	#4D7C0F	#A3E635	#D9F99D	#F7FEE7
+11 Warm Neutral	#292524	#57534E	#A8A29E	#E7E5E4	#FAFAF9
+12 Sandstone	#5C4033	#A47148	#D8B08C	#EAD7C3	#FFF9F1
+13 Terracotta	#7C2D12	#C2410C	#FB923C	#FED7AA	#FFF7ED
+14 Sunset	#7F1D1D	#DC2626	#FB923C	#FDE68A	#FFFBEB
+15 Coral Pop	#7F1D1D	#E11D48	#FB7185	#FECDD3	#FFF1F2
+16 Rose Elegance	#881337	#BE185D	#F472B6	#FBCFE8	#FDF2F8
+17 Burgundy Luxury	#450A0A	#7F1D1D	#B45309	#FDE68A	#FFFBF5
+18 Gold and Charcoal	#18181B	#3F3F46	#CA8A04	#FDE68A	#FAFAF9
+19 Monochrome	#111827	#374151	#6B7280	#D1D5DB	#F9FAFB
+20 Slate Dashboard	#0F172A	#334155	#64748B	#CBD5E1	#F8FAFC
+21 Cyber Neon	#09090B	#27272A	#22D3EE	#E879F9	#FAFAFA
+22 Dark Terminal	#071A0B	#153E20	#4ADE80	#86EFAC	#D1FAE5
+23 Black and Amber	#111111	#292524	#F59E0B	#FDE68A	#FFFDF5
+24 Arctic	#164E63	#0891B2	#67E8F9	#CFFAFE	#F0FDFF
+25 Sky Light	#075985	#0284C7	#38BDF8	#BAE6FD	#F0F9FF
+26 Ocean Sunset	#164E63	#0E7490	#F97316	#FDBA74	#FFF7ED
+27 Lavender Calm	#4C1D95	#7C3AED	#C4B5FD	#EDE9FE	#FAF5FF
+28 Soft Pastel	#64748B	#A5B4FC	#FBCFE8	#FDE68A	#FFFBF5
+29 Cream and Olive	#3F3D2E	#6B705C	#A5A58D	#FFE8D6	#FFFDF8
+30 Sage Wellness	#344E41	#588157	#A3B18A	#DAD7CD	#F6F7F2
+31 Medical Clean	#134E4A	#0D9488	#5EEAD4	#CCFBF1	#F0FDFA
+32 Healthcare Blue	#1E3A8A	#2563EB	#60A5FA	#DBEAFE	#EFF6FF
+33 Education Bright	#1D4ED8	#F97316	#FACC15	#BFDBFE	#FFFBEB
+34 Playful Product	#4338CA	#EC4899	#F59E0B	#A7F3D0	#FFF7ED
+35 African Earth	#3E2723	#795548	#C17F3A	#E5C07B	#FFF8E7
+36 Kenyan Flag Inspired	#111827	#B91C1C	#15803D	#D1D5DB	#FFFFFF
+37 Royal Blue and Gold	#172554	#1D4ED8	#D4A72C	#FDE68A	#F8FAFC
+38 Startup Violet	#2E1065	#7C3AED	#EC4899	#F5D0FE	#FDF4FF
+39 High Contrast Accessible	#000000	#1D4ED8	#FFFFFF	#FACC15	#F3F4F6
+40 Minimal Green SaaS	#14532D	#15803D	#4ADE80	#BBF7D0	#F0FDF4
+
+Palette usage tips
+Primary: navigation, main headings and brand anchors.
+Secondary: secondary buttons, links and selected states.
+Accent: calls to action, data highlights and badges; use sparingly.
+Soft/highlight: selected rows, chips and low-emphasis panels.
+Background: page background; preserve sufficient contrast with body text.
+Part 5 — Licensing, ownership and commercial terms
+Topic	What to define in the proposal or contract
+Open-source dependencies	Read the licence of each dependency and any transitive dependency. MIT, BSD and Apache-2.0 commonly allow commercial use subject to their conditions; copyleft licences may impose additional obligations. This is general information, not legal advice.
+Client ownership	Specify whether the client receives source code, deployment scripts, design assets, documentation and intellectual-property rights. Define any third-party or reusable components that remain the developer's property.
+Hosted software licence	A recurring licence should define the number of users/tenants, usage limits, storage, availability target, support hours, update policy, cancellation, data export and data deletion.
+Maintenance and support	Define response times separately from resolution times. State whether support covers defects, hosting incidents, minor changes, security updates or new features.
+Third-party charges	List cloud hosting, domains, email/SMS, payment processing, maps, AI/API usage and app-store fees as separate pass-through charges unless explicitly included.
+Security and privacy	Set responsibilities for access controls, personal-data handling, retention, backups, incident response and compliance with applicable laws and contracts.
+Acceptance and changes	Use written acceptance criteria, a limited defect warranty period, and a change-request process for work outside the agreed scope.
+
+Part 6 — Quotation worksheet
+Use this checklist before converting a catalogue estimate into a client quote.
+☐ Problem and business outcome are written in plain language.
+☐ Users, roles, tenants and permission boundaries are defined.
+☐ Pages/screens, workflows, reports and exports are listed.
+☐ Integrations and third-party costs are identified.
+☐ Data import, cleanup and migration requirements are estimated.
+☐ Security, audit logs, backups, restore testing and monitoring are scoped.
+☐ Hosting environment, traffic assumptions and availability needs are agreed.
+☐ Testing, accessibility, documentation, training and handover are included.
+☐ Payment milestones, delivery dates, revision limits and acceptance criteria are agreed.
+☐ Recurring support, maintenance, hosting and licence renewals are separated from the one-time build.
+Sample quote structure
+Line item	Suggested billing basis	What it should cover
+Discovery and specification	Fixed fee or time-boxed workshop	Requirements, workflows, risks and acceptance criteria
+UI/UX and frontend	Fixed milestone	Responsive screens, components and accessibility basics
+Backend/API and database	Fixed milestone	Business logic, validation, permissions and migrations
+Integrations and automation	Scoped line items	Payment/email/SMS/third-party APIs and background jobs
+Testing and security	Fixed milestone	Automated tests, review, fixes and acceptance support
+Deployment and handover	Fixed milestone	Production configuration, documentation and training
+Hosting and third-party usage	Monthly pass-through	Provider costs, usage and renewal terms
+Maintenance/support	Monthly or annual plan	Defined support hours, updates and response targets
+
+Final reminder
+Treat this document as a starting catalogue rather than a promise that every project has the same price. A production-grade enterprise or multi-tenant SaaS normally requires deeper discovery and a written technical scope before a firm quote can be made. Recheck exchange rates and local market conditions before sending a proposal.
+Currency reference used for this edition: US$1 = KSh 129.85; US$1 = €0.8911. All converted values are indicative and rounded.

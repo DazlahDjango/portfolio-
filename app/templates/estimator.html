@@ -1,0 +1,505 @@
+{% extends 'base.html' %}
+
+{% block title %}Project Builder & Price Estimator{% endblock %}
+{% block meta_description %}Configure your custom web or enterprise software solution, choose frameworks, database, frontend, styling palettes and get an instant transparent quote in KSh, USD, or EUR.{% endblock %}
+
+{% block content %}
+<section class="estimator-hero">
+    <div class="container">
+        <div class="estimator-hero-badge">
+            <span class="badge-pulse"></span> Interactive Project Configurator & Pricing Engine
+        </div>
+        <h1 class="estimator-hero-title">
+            Configure Your System, <span class="gold">Get An Instant Quote</span>
+        </h1>
+        <p class="estimator-hero-desc">
+            Explore backend frameworks with deep architectural breakdowns, choose your frontend, database,
+            add-ons, and visual color palette. Pricing defaults to <strong>Kenyan Shillings (KSh)</strong> with instant currency toggles.
+        </p>
+
+        <!-- Global Top Currency Bar -->
+        <div class="currency-switcher-wrapper">
+            <span class="currency-label">Currency:</span>
+            <div class="currency-pills" id="currencyPills">
+                <button type="button" class="currency-pill active" data-curr="KES">
+                    <span class="pill-flag">🇰🇪</span> KSh (KES)
+                </button>
+                <button type="button" class="currency-pill" data-curr="USD">
+                    <span class="pill-flag">🇺🇸</span> $ (USD)
+                </button>
+                <button type="button" class="currency-pill" data-curr="EUR">
+                    <span class="pill-flag">🇪🇺</span> € (EUR)
+                </button>
+            </div>
+            <span class="rate-notice">(1 USD ≈ 129.85 KES ≈ 0.8911 EUR)</span>
+        </div>
+    </div>
+</section>
+
+<!-- Main Estimator Stepper Section -->
+<section class="section estimator-section">
+    <div class="container estimator-container">
+
+        <!-- Stepper Progress Tracker (Full Width across top) -->
+        <div class="stepper-nav">
+            <div class="step-item active" data-step-target="step1">
+                <span class="step-num">1</span>
+                <span class="step-text">Backend</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" data-step-target="step2">
+                <span class="step-num">2</span>
+                <span class="step-text">System / Deliverable</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" data-step-target="step3">
+                <span class="step-num">3</span>
+                <span class="step-text">Frontend & Database</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" data-step-target="step4">
+                <span class="step-num">4</span>
+                <span class="step-text">Features & Integrations</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" data-step-target="step5">
+                <span class="step-num">5</span>
+                <span class="step-text">UI Palette</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" data-step-target="step6">
+                <span class="step-num">6</span>
+                <span class="step-text">DevOps & Deploy</span>
+            </div>
+        </div>
+
+        <!-- 2-Column Split: Steps (70%) + Sticky Summary (30%) -->
+        <div class="estimator-layout">
+            <div class="estimator-steps-container">
+
+                <!-- STEP 1: BACKEND FRAMEWORK SELECTION WITH DEEP DESCRIPTIONS -->
+                <div class="step-card active-step" id="step1">
+                    <div class="step-header">
+                        <div class="step-badge">Step 1 of 6</div>
+                        <h2 class="step-title">Select Your Core Backend Framework</h2>
+                        <p class="step-subtitle">
+                            Every system is anchored by its backend engine. Click a framework to view its full architectural breakdown and see what makes it unique.
+                        </p>
+                    </div>
+
+                    <div class="framework-grid">
+                        {% for f_key, f in frameworks.items() %}
+                        <div class="framework-card {{ 'selected' if f_key == 'django' else '' }}" data-framework="{{ f_key }}">
+                            <div class="framework-card-top">
+                                <span class="framework-badge">{{ f.badge }}</span>
+                                <div class="framework-radio-indicator"></div>
+                            </div>
+                            <h3 class="framework-name">{{ f.name }}</h3>
+                            <p class="framework-tagline">{{ f.tagline }}</p>
+
+                            <!-- Expandable Deep Description Box -->
+                            <div class="framework-explanation">
+                                <div class="expl-heading">What is {{ f.name.split('/')[0].strip() }}?</div>
+                                <p class="expl-body">{{ f.what_is }}</p>
+                                <div class="expl-points-title">Key Architectural Strengths:</div>
+                                <ul class="expl-points">
+                                    {% for point in f.why_choose %}
+                                    <li>{{ point }}</li>
+                                    {% endfor %}
+                                </ul>
+                                <div class="expl-best">
+                                    <strong>Ideal for:</strong> {{ f.best_for }}
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-sm btn-outline select-fw-btn">
+                                {{ 'Selected Backend' if f_key == 'django' else 'Select ' ~ f.name.split('/')[0].strip() }}
+                            </button>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="step-nav-footer">
+                        <div></div>
+                        <button type="button" class="btn btn-primary btn-step-nav" data-next-step="step2">
+                            Next: Select Deliverable →
+                        </button>
+                    </div>
+                </div>
+
+            <!-- STEP 2: SYSTEM / PROJECT TYPE SELECTION -->
+            <div class="step-card" id="step2">
+                <div class="step-header">
+                    <div class="step-badge">Step 2 of 6</div>
+                    <h2 class="step-title">Choose Your Target System / Deliverable</h2>
+                    <p class="step-subtitle">
+                        Showing projects optimized for your selected backend (<strong id="activeFrameworkLabel" class="gold">Django</strong>).
+                    </p>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+                    {% for p in projects %}
+                    <div class="project-option-card {{ 'active' if loop.first else '' }}"
+                         data-id="{{ p.id }}"
+                         data-framework="{{ p.framework }}"
+                         data-price-usd="{{ p.prices.usd }}"
+                         data-price-kes="{{ p.prices.kes }}"
+                         data-price-eur="{{ p.prices.eur }}"
+                         data-monthly-kes="{{ p.monthly.kes }}"
+                         data-monthly-usd="{{ p.monthly.usd }}"
+                         data-monthly-eur="{{ p.monthly.eur }}"
+                         data-name="{{ p.name }}">
+                        <div class="project-option-header">
+                            <h4 class="project-option-title">{{ p.name }}</h4>
+                            <div class="project-price-tag" data-kes="KSh {{ '{:,}'.format(p.prices.kes) }}" data-usd="${{ '{:,}'.format(p.prices.usd) }}" data-eur="€{{ '{:,}'.format(p.prices.eur) }}">
+                                KSh {{ '{:,}'.format(p.prices.kes) }}
+                            </div>
+                        </div>
+                        <p class="project-option-scope">{{ p.scope }}</p>
+                        <div class="project-option-footer">
+                            <span class="monthly-tag" data-kes="+ KSh {{ '{:,}'.format(p.monthly.kes) }}/mo support" data-usd="+ ${{ '{:,}'.format(p.monthly.usd) }}/mo support" data-eur="+ €{{ '{:,}'.format(p.monthly.eur) }}/mo support">
+                                + KSh {{ '{:,}'.format(p.monthly.kes) }}/mo support
+                            </span>
+                            <span class="select-indicator">Selected ✓</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="step-nav-footer">
+                    <button type="button" class="btn btn-outline btn-step-nav" data-prev-step="step1">
+                        ← Back: Backend
+                    </button>
+                    <button type="button" class="btn btn-primary btn-step-nav" data-next-step="step3">
+                        Next: Frontend & Database →
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3: FRONTEND FRAMEWORK & DATABASE SELECTION -->
+            <div class="step-card" id="step3">
+                <div class="step-header">
+                    <div class="step-badge">Step 3 of 6</div>
+                    <h2 class="step-title">Choose Frontend Framework & Database Engine</h2>
+                    <p class="step-subtitle">
+                        Pair your backend system with the ideal user experience layer and relational or document database.
+                    </p>
+                </div>
+
+                <!-- Sub-step: Frontend -->
+                <div class="sub-step-block">
+                    <h3 class="sub-step-title"><span class="gold">A.</span> Frontend Framework Layer</h3>
+                    <div class="options-pills-grid" id="frontendGrid">
+                        {% for fe in frontends %}
+                        <div class="option-pill-card {{ 'selected' if loop.first else '' }}"
+                             data-category="frontend"
+                             data-id="{{ fe.id }}"
+                             data-name="{{ fe.name }}"
+                             data-price-usd="{{ fe.prices.usd }}"
+                             data-price-kes="{{ fe.prices.kes }}"
+                             data-price-eur="{{ fe.prices.eur }}">
+                            <div class="pill-top">
+                                <span class="pill-badge">{{ fe.badge }}</span>
+                                <span class="pill-price-badge" data-kes="+ KSh {{ '{:,}'.format(fe.prices.kes) }}" data-usd="+ ${{ '{:,}'.format(fe.prices.usd) }}" data-eur="+ €{{ '{:,}'.format(fe.prices.eur) }}">
+                                    + KSh {{ '{:,}'.format(fe.prices.kes) }}
+                                </span>
+                            </div>
+                            <h4 class="pill-title">{{ fe.name }}</h4>
+                            <p class="pill-desc">{{ fe.desc }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Sub-step: Database -->
+                <div class="sub-step-block">
+                    <h3 class="sub-step-title"><span class="gold">B.</span> Database & Storage Engine</h3>
+                    <div class="options-pills-grid" id="databaseGrid">
+                        {% for db in databases %}
+                        <div class="option-pill-card {{ 'selected' if loop.first else '' }}"
+                             data-category="database"
+                             data-id="{{ db.id }}"
+                             data-name="{{ db.name }}"
+                             data-price-usd="{{ db.prices.usd }}"
+                             data-price-kes="{{ db.prices.kes }}"
+                             data-price-eur="{{ db.prices.eur }}">
+                            <div class="pill-top">
+                                <span class="pill-badge">{{ db.badge }}</span>
+                                <span class="pill-price-badge" data-kes="+ KSh {{ '{:,}'.format(db.prices.kes) }}" data-usd="+ ${{ '{:,}'.format(db.prices.usd) }}" data-eur="+ €{{ '{:,}'.format(db.prices.eur) }}">
+                                    + KSh {{ '{:,}'.format(db.prices.kes) }}
+                                </span>
+                            </div>
+                            <h4 class="pill-title">{{ db.name }}</h4>
+                            <p class="pill-desc">{{ db.desc }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="step-nav-footer">
+                    <button type="button" class="btn btn-outline btn-step-nav" data-prev-step="step2">
+                        ← Back: Deliverable
+                    </button>
+                    <button type="button" class="btn btn-primary btn-step-nav" data-next-step="step4">
+                        Next: Features & Add-ons →
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4: ADDITIONAL FEATURES & INTEGRATIONS -->
+            <div class="step-card" id="step4">
+                <div class="step-header">
+                    <div class="step-badge">Step 4 of 6</div>
+                    <h2 class="step-title">Additional Features & Platform Modules</h2>
+                    <p class="step-subtitle">
+                        Select optional add-ons to integrate directly into your application. Multi-select as needed.
+                    </p>
+                </div>
+
+                <div class="addons-grid">
+                    {% for addon in addons %}
+                    <label class="addon-checkbox-card" for="addon_{{ addon.id }}">
+                        <input type="checkbox"
+                               id="addon_{{ addon.id }}"
+                               class="addon-input"
+                               data-id="{{ addon.id }}"
+                               data-name="{{ addon.name }}"
+                               data-price-usd="{{ addon.prices.usd }}"
+                               data-price-kes="{{ addon.prices.kes }}"
+                               data-price-eur="{{ addon.prices.eur }}">
+                        <div class="addon-content">
+                            <div class="addon-title-row">
+                                <span class="addon-name">{{ addon.name }}</span>
+                                <span class="addon-price" data-kes="+ KSh {{ '{:,}'.format(addon.prices.kes) }}" data-usd="+ ${{ '{:,}'.format(addon.prices.usd) }}" data-eur="+ €{{ '{:,}'.format(addon.prices.eur) }}">
+                                    + KSh {{ '{:,}'.format(addon.prices.kes) }}
+                                </span>
+                            </div>
+                            <p class="addon-desc">{{ addon.desc }}</p>
+                        </div>
+                    </label>
+                    {% endfor %}
+                </div>
+
+                <div class="step-nav-footer">
+                    <button type="button" class="btn btn-outline btn-step-nav" data-prev-step="step3">
+                        ← Back: Frontend & Database
+                    </button>
+                    <button type="button" class="btn btn-primary btn-step-nav" data-next-step="step5">
+                        Next: UI Styling & Palette →
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 5: 40 CSS PALETTES & UI STYLING -->
+            <div class="step-card" id="step5">
+                <div class="step-header">
+                    <div class="step-badge">Step 5 of 6</div>
+                    <h2 class="step-title">UI Styling & Color Palette (40 CSS Themes)</h2>
+                    <p class="step-subtitle">
+                        Pick the aesthetic identity for your web app. Each theme features balanced 5-color harmony designed for high contrast and modern elegance.
+                    </p>
+                </div>
+
+                <!-- Live Palette Preview Banner -->
+                <div class="palette-preview-banner" id="palettePreviewBanner">
+                    <div class="banner-color-bar" id="bannerColorBar">
+                        <div class="bar-c c-primary" title="Primary"></div>
+                        <div class="bar-c c-secondary" title="Secondary"></div>
+                        <div class="bar-c c-accent" title="Accent"></div>
+                        <div class="bar-c c-soft" title="Soft"></div>
+                        <div class="bar-c c-bg" title="Background"></div>
+                    </div>
+                    <div class="banner-info">
+                        <span class="banner-selected-label">Selected Palette:</span>
+                        <h4 class="banner-palette-name" id="bannerPaletteName">01 Ocean Professional</h4>
+                        <p class="banner-palette-mood" id="bannerPaletteMood">Trustworthy Corporate</p>
+                    </div>
+                </div>
+
+                <!-- UI Customization Tiers -->
+                <div class="ui-tier-selection">
+                    <h4 class="ui-tier-title">Styling Engineering Level:</h4>
+                    <div class="tier-cards-grid">
+                        {% for tier in ui_tiers %}
+                        <div class="tier-card {{ 'selected' if loop.first else '' }}"
+                             data-id="{{ tier.id }}"
+                             data-name="{{ tier.name }}"
+                             data-price-usd="{{ tier.prices.usd }}"
+                             data-price-kes="{{ tier.prices.kes }}"
+                             data-price-eur="{{ tier.prices.eur }}">
+                            <div class="tier-header">
+                                <span class="tier-name">{{ tier.name }}</span>
+                                <span class="tier-price" data-kes="{{ 'Included (KSh 0)' if tier.prices.kes == 0 else '+ KSh ' ~ '{:,}'.format(tier.prices.kes) }}" data-usd="{{ 'Included ($0)' if tier.prices.usd == 0 else '+ $' ~ '{:,}'.format(tier.prices.usd) }}" data-eur="{{ 'Included (€0)' if tier.prices.eur == 0 else '+ €' ~ '{:,}'.format(tier.prices.eur) }}">
+                                    {{ 'Included (KSh 0)' if tier.prices.kes == 0 else '+ KSh ' ~ '{:,}'.format(tier.prices.kes) }}
+                                </span>
+                            </div>
+                            <p class="tier-desc">{{ tier.desc }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 40 Palettes Grid -->
+                <h4 class="palettes-section-title">Select from the 40 Curated Palettes:</h4>
+                <div class="palettes-grid">
+                    {% for p in palettes %}
+                    <div class="palette-swatch-card {{ 'selected' if loop.first else '' }}"
+                         data-id="{{ p.id }}"
+                         data-name="{{ p.name }}"
+                         data-mood="{{ p.mood }}"
+                         data-primary="{{ p.primary }}"
+                         data-secondary="{{ p.secondary }}"
+                         data-accent="{{ p.accent }}"
+                         data-soft="{{ p.soft }}"
+                         data-bg="{{ p.bg }}">
+                        <div class="palette-swatches">
+                            <span class="swatch-circle" style="background-color: {{ p.primary }};" data-color="{{ p.primary }}" title="Primary: {{ p.primary }}"></span>
+                            <span class="swatch-circle" style="background-color: {{ p.secondary }};" data-color="{{ p.secondary }}" title="Secondary: {{ p.secondary }}"></span>
+                            <span class="swatch-circle" style="background-color: {{ p.accent }};" data-color="{{ p.accent }}" title="Accent: {{ p.accent }}"></span>
+                            <span class="swatch-circle" style="background-color: {{ p.soft }};" data-color="{{ p.soft }}" title="Soft: {{ p.soft }}"></span>
+                            <span class="swatch-circle swatch-bg" style="background-color: {{ p.bg }};" data-color="{{ p.bg }}" title="Background: {{ p.bg }}"></span>
+                        </div>
+                        <div class="palette-info">
+                            <span class="palette-name">{{ p.name }}</span>
+                            <span class="palette-mood">{{ p.mood }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="step-nav-footer">
+                    <button type="button" class="btn btn-outline btn-step-nav" data-prev-step="step4">
+                        ← Back: Features & Add-ons
+                    </button>
+                    <button type="button" class="btn btn-primary btn-step-nav" data-next-step="step6">
+                        Next: DevOps & Deployment →
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 6: DEVOPS, DOCKER & DEPLOYMENT -->
+            <div class="step-card" id="step6">
+                <div class="step-header">
+                    <div class="step-badge">Step 6 of 6</div>
+                    <h2 class="step-title">Docker, Virtualization & Deployment</h2>
+                    <p class="step-subtitle">
+                        Ensure your system is containerized, secure, and production-ready on a Linux VPS or cloud instance.
+                    </p>
+                </div>
+
+                <div class="addons-grid">
+                    {% for d in devops %}
+                    <label class="addon-checkbox-card" for="devops_{{ d.id }}">
+                        <input type="checkbox"
+                               id="devops_{{ d.id }}"
+                               class="devops-input"
+                               data-id="{{ d.id }}"
+                               data-name="{{ d.name }}"
+                               data-price-usd="{{ d.prices.usd }}"
+                               data-price-kes="{{ d.prices.kes }}"
+                               data-price-eur="{{ d.prices.eur }}"
+                               {{ 'checked' if d.id == 'docker-full' else '' }}>
+                        <div class="addon-content">
+                            <div class="addon-title-row">
+                                <span class="addon-name">{{ d.name }} <span class="badge-mini">{{ d.badge }}</span></span>
+                                <span class="addon-price" data-kes="+ KSh {{ '{:,}'.format(d.prices.kes) }}" data-usd="+ ${{ '{:,}'.format(d.prices.usd) }}" data-eur="+ €{{ '{:,}'.format(d.prices.eur) }}">
+                                    + KSh {{ '{:,}'.format(d.prices.kes) }}
+                                </span>
+                            </div>
+                            <p class="addon-desc">{{ d.desc }}</p>
+                        </div>
+                    </label>
+                    {% endfor %}
+                </div>
+
+                <div class="step-nav-footer">
+                    <button type="button" class="btn btn-outline btn-step-nav" data-prev-step="step5">
+                        ← Back: UI Palette
+                    </button>
+                    <button type="button" class="btn btn-primary btn-step-nav" id="btnStep6Submit">
+                        Review & Request Quote →
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sticky Floating Real-Time Quote Summary Bar -->
+        <aside class="estimator-summary-panel" id="summaryPanel">
+            <div class="summary-card">
+                <div class="summary-header">
+                    <span class="summary-eyebrow">Estimate Summary</span>
+                    <h3 class="summary-title">Live Build Breakdown</h3>
+                </div>
+
+                <!-- Currency Quick Selector in Summary -->
+                <div class="summary-currency-bar">
+                    <span>Currency:</span>
+                    <select id="summaryCurrencySelect" class="summary-select">
+                        <option value="KES" selected>KSh (KES)</option>
+                        <option value="USD">USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                    </select>
+                </div>
+
+                <div class="summary-spec-list" id="summarySpecList">
+                    <div class="spec-row">
+                        <span class="spec-label">Backend:</span>
+                        <span class="spec-value" id="sumBackend">Django</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">System:</span>
+                        <span class="spec-value" id="sumProject">E-Commerce Store</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Frontend:</span>
+                        <span class="spec-value" id="sumFrontend">React SPA</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Database:</span>
+                        <span class="spec-value" id="sumDatabase">PostgreSQL</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Color Theme:</span>
+                        <span class="spec-value" id="sumPalette">01 Ocean Professional</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Add-ons:</span>
+                        <span class="spec-value" id="sumAddonsCount">None</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">DevOps / Docker:</span>
+                        <span class="spec-value" id="sumDevopsCount">Docker Setup</span>
+                    </div>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-totals">
+                    <div class="total-row main-total">
+                        <span class="total-label">Estimated One-Time Build:</span>
+                        <span class="total-amount gold" id="grandTotalBuild">KSh 0</span>
+                    </div>
+                    <div class="total-row sub-total">
+                        <span class="total-sub-label">Optional Monthly Service & Support:</span>
+                        <span class="total-sub-amount" id="grandTotalMonthly">KSh 0/mo</span>
+                    </div>
+                </div>
+
+                <div class="summary-actions">
+                    <button type="button" class="btn btn-primary btn-block btn-lg" id="btnRequestQuote">
+                        Request This Exact Build →
+                    </button>
+                    <p class="summary-guarantee">
+                        ⚡ Transparent estimates with no hidden fees. Submitting will pre-fill your inquiry into the contact form!
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+</section>
+
+<!-- Include Estimator Engine Script -->
+<script src="{{ url_for('static', filename='js/estimator.js') }}"></script>
+{% endblock %}

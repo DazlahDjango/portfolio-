@@ -48,7 +48,7 @@
     // 3. Reveal on scroll
     // ---------------------------------------------
     const revealTargets = document.querySelectorAll(
-        '.section, .preview-card, .stat-card, .service-card, .project-card, .skills-category, .info-card, .contact-form'
+        '.section:not(.estimator-section), .preview-card, .stat-card, .service-card, .project-card, .skills-category, .info-card, .contact-form'
     );
 
     revealTargets.forEach(function (el) {

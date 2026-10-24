@@ -24,6 +24,8 @@
                     class="{{ 'active' if request.endpoint == 'main.services' }}">Services</a></li>
             <li><a href="{{ url_for('main.projects') }}"
                     class="{{ 'active' if request.endpoint == 'main.projects' }}">Projects</a></li>
+            <li><a href="{{ url_for('main.estimator') }}"
+                    class="{{ 'active' if request.endpoint == 'main.estimator' }}"><span class="nav-badge-dot"></span>Build & Price</a></li>
             <li><a href="{{ url_for('main.contact') }}" class="nav-cta">Hire Me</a></li>
         </ul>
     </div>
